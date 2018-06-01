@@ -10,9 +10,12 @@ namespace Complexitytheory.Graph.VertexReachability
     {
         public bool IsReachable { get; private set; }
 
-        public VertexReachabilityInfo(bool pIsReachable)
+        public List<string> Path { get; private set; }
+
+        public VertexReachabilityInfo(bool pIsReachable, List<string> pPath)
         {
             this.IsReachable = pIsReachable;
+            this.Path = pPath;
         }
     }
 }
