@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryAdditionTuringMaschin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCTuringMaschine", "ABCTuringMaschine\ABCTuringMaschine.csproj", "{5D995390-658A-4DCD-BB51-804876123E53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Savitchs Theorem Vertex Reachability Check", "Savitchs Theorem Vertex Reachability Check\Savitchs Theorem Vertex Reachability Check.csproj", "{44023346-041A-499D-9459-9F779AA0F24B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{5D995390-658A-4DCD-BB51-804876123E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D995390-658A-4DCD-BB51-804876123E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D995390-658A-4DCD-BB51-804876123E53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44023346-041A-499D-9459-9F779AA0F24B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44023346-041A-499D-9459-9F779AA0F24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44023346-041A-499D-9459-9F779AA0F24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44023346-041A-499D-9459-9F779AA0F24B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{A180FD16-81EB-4A34-AD92-95E9933911B8} = {FD15E365-03BE-476C-931C-8503C06E7AE2}
 		{EB152903-5D4E-4359-ADEC-409DEF847836} = {FD15E365-03BE-476C-931C-8503C06E7AE2}
 		{5D995390-658A-4DCD-BB51-804876123E53} = {FD15E365-03BE-476C-931C-8503C06E7AE2}
+		{44023346-041A-499D-9459-9F779AA0F24B} = {30119876-180E-43CB-A386-90584F967498}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E767DA2-CC7F-4DDB-A260-B5FED560F704}
