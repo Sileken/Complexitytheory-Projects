@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Savitchs Theorem Vertex Rea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Median Finder", "Median Finder\Median Finder.csproj", "{BEBFC7B1-B019-45D4-B89F-2D9119E01D1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prime Checker", "Prime Checker\Prime Checker.csproj", "{31361AD3-100F-49A7-BD9B-D6078323EC45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{BEBFC7B1-B019-45D4-B89F-2D9119E01D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEBFC7B1-B019-45D4-B89F-2D9119E01D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEBFC7B1-B019-45D4-B89F-2D9119E01D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31361AD3-100F-49A7-BD9B-D6078323EC45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31361AD3-100F-49A7-BD9B-D6078323EC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31361AD3-100F-49A7-BD9B-D6078323EC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31361AD3-100F-49A7-BD9B-D6078323EC45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{5D995390-658A-4DCD-BB51-804876123E53} = {FD15E365-03BE-476C-931C-8503C06E7AE2}
 		{44023346-041A-499D-9459-9F779AA0F24B} = {30119876-180E-43CB-A386-90584F967498}
 		{BEBFC7B1-B019-45D4-B89F-2D9119E01D1F} = {30119876-180E-43CB-A386-90584F967498}
+		{31361AD3-100F-49A7-BD9B-D6078323EC45} = {30119876-180E-43CB-A386-90584F967498}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E767DA2-CC7F-4DDB-A260-B5FED560F704}

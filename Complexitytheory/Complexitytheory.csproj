@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +49,7 @@
     <Compile Include="Graph\VertexReachability\VertexReachabilityChecker.cs" />
     <Compile Include="Graph\VertexReachability\VertexReachabilityInfo.cs" />
     <Compile Include="Median\MedianFinder.cs" />
+    <Compile Include="Prime\PrimeTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QSAT\QSatResolvercs.cs" />
     <Compile Include="QSAT\Quantor.cs" />
