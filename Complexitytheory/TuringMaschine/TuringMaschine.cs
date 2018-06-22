@@ -59,13 +59,15 @@ namespace Complexitytheory.TuringMaschine
         {
             InitializeInputTape(pInput);
 
+            ConsoleWriteConfiguration();
+
             while (!_currentState.Equals(_haltState))
             {
                 Production matchedProduction = GetMatchedProduction();
                 _currentState = matchedProduction.NewState;
-                //System.out.println("Current State: " + currentState);
                 ReplaceSymbols(matchedProduction);
                 MoveTapesCursors(matchedProduction);
+                ConsoleWriteConfiguration();
             }
 
             return BuildOutput();
@@ -178,6 +180,57 @@ namespace Complexitytheory.TuringMaschine
             }
 
             return output;
+        }
+
+        private void ConsoleWriteConfiguration()
+        {
+            Console.WriteLine();
+            Console.WriteLine($"Current State:\t {_currentState}");
+
+            int maxTabeLength = Math.Max(_tapes.Max(tape => tape.Count), _tapesPosition.Max() + 1);
+
+            for (var tapeIndex = 0; tapeIndex < _tapes.Length; tapeIndex++)
+            {
+                var tape = _tapes[tapeIndex];
+                string output = string.Empty;
+
+                for (int i = 0; i < tape.Count; i++)
+                {
+                    var tapePosi = _tapesPosition[tapeIndex];
+                    if (tapePosi == i)
+                    {
+                        output += $" >{tape[i]}< ";
+                    }
+                    else
+                    {
+                        output += $" {tape[i]} ";
+                    }
+                }
+
+                for (int i = tape.Count; i < maxTabeLength; i++)
+                {
+                    var tapePosi = _tapesPosition[tapeIndex];
+                    if (tapePosi == i)
+                    {
+                        output += $" >{_emptySymbol}< ";
+                    }
+                    else
+                    {
+                        output += $" {_emptySymbol} ";
+                    }
+                }
+
+                if (tapeIndex == 0)
+                {
+                    Console.WriteLine($"Input Tape:\t [{output}]");
+                }else if (tapeIndex == _tapes.Length - 1)
+                {
+                    Console.WriteLine($"Output Tape:\t [{output}]");
+                }
+                else {
+                    Console.WriteLine($"Additional Tape: [{output}]");
+                }
+            }
         }
     }
 }
