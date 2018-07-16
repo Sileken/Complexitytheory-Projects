@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traveling Salesman Problem"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teilbar5TuringMaschine", "Teilbar5TuringMaschine\Teilbar5TuringMaschine.csproj", "{5F54C600-BD0A-447A-9F3C-1A460A8F7674}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VertexCoverToSat", "VertexCoverToSat\VertexCoverToSat.csproj", "{B42A3363-5524-42F5-90F3-B08D652CAB54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{5F54C600-BD0A-447A-9F3C-1A460A8F7674}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F54C600-BD0A-447A-9F3C-1A460A8F7674}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F54C600-BD0A-447A-9F3C-1A460A8F7674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42A3363-5524-42F5-90F3-B08D652CAB54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42A3363-5524-42F5-90F3-B08D652CAB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42A3363-5524-42F5-90F3-B08D652CAB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42A3363-5524-42F5-90F3-B08D652CAB54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -153,6 +159,7 @@ Global
 		{68505296-C698-4A23-B1DF-983C94CDEBCB} = {30119876-180E-43CB-A386-90584F967498}
 		{EA04C1D4-FEE5-4953-A27F-B020BCA8D31C} = {30119876-180E-43CB-A386-90584F967498}
 		{5F54C600-BD0A-447A-9F3C-1A460A8F7674} = {FD15E365-03BE-476C-931C-8503C06E7AE2}
+		{B42A3363-5524-42F5-90F3-B08D652CAB54} = {30119876-180E-43CB-A386-90584F967498}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E767DA2-CC7F-4DDB-A260-B5FED560F704}

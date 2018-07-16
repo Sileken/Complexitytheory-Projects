@@ -58,6 +58,7 @@
     <Compile Include="Graph\GeneralizedGeography\GeographyStrategyInfo.cs" />
     <Compile Include="Graph\IndependentSet\IndependentSetReducer.cs" />
     <Compile Include="Graph\TravelingSalesmanProblem\TravelingSalesmanResolver.cs" />
+    <Compile Include="Graph\VertexCover\VertexCoverReducer.cs" />
     <Compile Include="SetCover\SetCoverResolver.cs" />
     <Compile Include="Graph\ThreeColoring\ThreeColoringReducer.cs" />
     <Compile Include="Graph\VertexCover\VertexCoverResolver.cs" />

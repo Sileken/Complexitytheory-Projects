@@ -14,6 +14,7 @@ namespace Teilbar5TuringMaschine
             List<Production> productions = GetProductions();
             TuringMaschine turningMaschine = new TuringMaschine( "qStart", "qHalt", 's', 'e', productions);
 
+            // Input 10001100101
             List<char> input = new List<char>();
             input.Add('1');
             input.Add('0');
