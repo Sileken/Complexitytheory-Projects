@@ -48,16 +48,6 @@ namespace Complexitytheory.SAT
                     {
                         break;
                     }
-
-                    if (_satisfiableInfo.IsSatisfiable && variableAssignment.Count(c => c) == 7)
-                    {
-                        Console.WriteLine("---------------------------------------------------");
-                        for (int z = 0; z < variableList.Count; z++)
-                        {
-                            Console.WriteLine("{0}:{1}", variableList[z].Name, variableAssignment[z]);
-                        }
-                        Console.WriteLine("---------------------------------------------------");
-                    }
                 }
             }
          
