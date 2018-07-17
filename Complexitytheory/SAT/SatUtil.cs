@@ -10,13 +10,13 @@ namespace Complexitytheory.SAT
         public static bool[] GetMaxSatisfiebleAssignment(List<bool[]> pSatisfiableAssignments)
         {
             return pSatisfiableAssignments.OrderByDescending(assignment => assignment.Count(constant => constant))
-                .First();
+                .LastOrDefault();
         }
 
         public static bool[] GetMinSatisfiebleAssignment(List<bool[]> pSatisfiableAssignments)
         {
             return pSatisfiableAssignments.OrderByDescending(assignment => assignment.Count(constant => constant))
-                .Last();
+                .LastOrDefault();
         }
 
         private void PrintSatisfiableAssignments(List<List<bool>> pPrintSatisfiableAssignments,

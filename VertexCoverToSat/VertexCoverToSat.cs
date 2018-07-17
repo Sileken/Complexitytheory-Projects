@@ -32,7 +32,7 @@ namespace VertexCoverToSat
             };
             int vertexCount = 7;
 
-            // Cover (1,5,3)
+            //Cover(1, 5, 3)
             //var undirectedGraph = new AdjacentMap
             //{
             //    {"1", new List<string>() {"2", "4"}},
@@ -63,29 +63,29 @@ namespace VertexCoverToSat
             Console.WriteLine();
             Console.WriteLine();
 
-            //SatResolver satResolver = new SatResolver();
+            SatResolver satResolver = new SatResolver();
 
-            //Stopwatch stopwatch = new Stopwatch();
-            //stopwatch.Start();
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
 
-            //var satisfiableInfo = satResolver.IsSatisfiable(formula);
+            var satisfiableInfo = satResolver.IsSatisfiable(formula);
 
-            //stopwatch.Stop();
-            //Console.WriteLine($"{Console.Out.NewLine}Time elapsed: {stopwatch.Elapsed}");
+            stopwatch.Stop();
+            Console.WriteLine($"{Console.Out.NewLine}Time elapsed: {stopwatch.Elapsed}");
 
-            //bool[] maxSatisfiebleAssignment = SatUtil.GetMinSatisfiebleAssignment(satisfiableInfo.SatisfiableAssignments);
-            //if (satisfiableInfo.IsSatisfiable && maxSatisfiebleAssignment.Count(a => a) > 0)
-            //{
-            //    Console.WriteLine("\nThe vertex cover problem is satisfiable!");
-            //    for (int i = 0; i < satisfiableInfo.VariableList.Count; i++)
-            //    {
-            //        Console.WriteLine("{0}:{1}", satisfiableInfo.VariableList[i].Name, maxSatisfiebleAssignment[i]);
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("\nThe vertex cover problem is not satisfiable!");
-            //}
+            bool[] maxSatisfiebleAssignment = SatUtil.GetMinSatisfiebleAssignment(satisfiableInfo.SatisfiableAssignments);
+            if (satisfiableInfo.IsSatisfiable && maxSatisfiebleAssignment.Count(a => a) > 0)
+            {
+                Console.WriteLine("\nThe vertex cover problem is satisfiable!");
+                for (int i = 0; i < satisfiableInfo.VariableList.Count; i++)
+                {
+                    Console.WriteLine("{0}:{1}", satisfiableInfo.VariableList[i].Name, maxSatisfiebleAssignment[i]);
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nThe vertex cover problem is not satisfiable!");
+            }
 
             Console.ReadLine();
         }

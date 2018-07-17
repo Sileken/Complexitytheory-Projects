@@ -77,17 +77,21 @@ namespace Complexitytheory.Graph.VertexCover
         {
             var formular = new List<IFormulaComponent>();
 
-            for (int i = 0; i < pVariables.Count - 1; i++)
+            for (int i = 0; i < pVariables.Count; i++)
             {
                 var variable1 = pVariables[i];
-                var variable2 = pVariables[i + 1];
 
-                if (i > 0)
+                for (int k = i + 1; k < pVariables.Count; k++)
                 {
-                    formular.Add(_and);
-                }
+                    var variable2 = pVariables[k];
 
-                formular.Add(new Bracket() { _not, variable1, _or, _not, variable2});
+                    if (i > 0 || k > 1)
+                    {
+                        formular.Add(_and);
+                    }
+
+                    formular.Add(new Bracket() { _not, variable1, _or, _not, variable2 });
+                }
             }
 
             return formular;

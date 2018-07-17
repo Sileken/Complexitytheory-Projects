@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
 using System.Threading.Tasks;
 using Complexitytheory.SAT.FormulaComponents;
 
@@ -22,10 +24,10 @@ namespace Complexitytheory.SAT
 
                 List<Variable> variableList = pFormula.GetVariables();
                 _satisfiableInfo.VariableList = variableList;
-                var assignmentCount = Convert.ToInt64(Math.Pow(2, variableList.Count));
-
-                var parallelOptions = new ParallelOptions { MaxDegreeOfParallelism = -1 };
-                Parallel.For(0, assignmentCount, parallelOptions, (i, loopState) => {
+                BigInteger assignmentCount = BigInteger.Pow(2, variableList.Count);
+ 
+                for (BigInteger i = 0; i < assignmentCount; i++)
+                {
                     var variableAssignment = new bool[variableList.Count];
                     for (var k = 0; k < variableList.Count; k++)
                     {
@@ -35,21 +37,28 @@ namespace Complexitytheory.SAT
 
                     var tempSatisfiable = EvaluateFormula(pFormula, variableAssignment, variableList);
 
-                    lock (_mutex)
+                    if (tempSatisfiable && variableAssignment.Length > 0)
                     {
-                        if (tempSatisfiable && variableAssignment.Length > 0)
-                        {
-                            _satisfiableInfo.SatisfiableAssignments.Add(variableAssignment);
-                        } 
-
-                        _satisfiableInfo.IsSatisfiable = _satisfiableInfo.IsSatisfiable || tempSatisfiable;
-
-                        if (_satisfiableInfo.IsSatisfiable && StopOnFirstSatisfiableAssignment)
-                        {
-                            loopState.Stop();
-                        }
+                        _satisfiableInfo.SatisfiableAssignments.Add(variableAssignment);
                     }
-                });
+
+                    _satisfiableInfo.IsSatisfiable = _satisfiableInfo.IsSatisfiable || tempSatisfiable;
+
+                    if (_satisfiableInfo.IsSatisfiable && StopOnFirstSatisfiableAssignment)
+                    {
+                        break;
+                    }
+
+                    if (_satisfiableInfo.IsSatisfiable && variableAssignment.Count(c => c) == 7)
+                    {
+                        Console.WriteLine("---------------------------------------------------");
+                        for (int z = 0; z < variableList.Count; z++)
+                        {
+                            Console.WriteLine("{0}:{1}", variableList[z].Name, variableAssignment[z]);
+                        }
+                        Console.WriteLine("---------------------------------------------------");
+                    }
+                }
             }
          
             return _satisfiableInfo;
